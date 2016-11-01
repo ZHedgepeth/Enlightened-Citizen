@@ -7,6 +7,9 @@ export default Ember.Component.extend({
         zip: this.get('zip')
       };
       this.sendAction('zipLookup', params);
+    },
+    getCommittees() {
+      this.sendAction('getCommittees');
     }
   }
 });
