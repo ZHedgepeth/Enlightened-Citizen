@@ -1,0 +1,13 @@
+{{#if model}}
+<h2>List of SubCommittees</h2>
+
+
+<ul>
+  {{#each model as |subcommittee|}}
+    <li> {{subcommittee.name}} {{subcommittee.committee_id}} </li>
+  {{/each}}
+</ul>
+{{else}}
+there are no subcommittees for this committee
+<p>click here to go back to the {{#link-to 'index'}}home page{{/link-to}}</p>
+{{/if}}

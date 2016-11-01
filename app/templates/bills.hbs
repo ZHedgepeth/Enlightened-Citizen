@@ -1,0 +1,17 @@
+<h2>List of recent Bills</h2>
+
+<ul>
+  {{#each model as |bill|}}
+    <li><strong>Title:</strong> {{bill.short_title}}
+    <br>
+    <strong>Description:</strong> {{bill.official_title}}
+    <br>
+    <strong>Sponsor: </strong>{{bill.sponsor.first_name}} {{bill.sponsor.last_name}}
+    <br>
+    <strong>Introduced on: </strong>{{bill.introduced_on}}
+    <br>
+    <strong>Link to latest version of bill: <a href={{bill.last_version.urls.pdf}}> CHECK IT OUT</a></strong>
+    </li>
+    <br>
+  {{/each}}
+</ul>

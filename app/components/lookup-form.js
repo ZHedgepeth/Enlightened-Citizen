@@ -10,6 +10,9 @@ export default Ember.Component.extend({
     },
     getCommittees() {
       this.sendAction('getCommittees');
+    },
+    getBills() {
+      this.sendAction('getBills');
     }
   }
 });

@@ -1,5 +1,9 @@
+<h2>List of Committees</h2>
+
+<p>Click on the button to find that committees' subcommittees</p>
 <ul>
   {{#each model as |committee|}}
-    <li> {{committee.name}} </li>
+    <li> {{committee.name}} - {{committee.committee_id}} </li>
+    {{#link-to 'subcommittees' committee.committee_id}}click here to view subcommittees{{/link-to}}
   {{/each}}
 </ul>
